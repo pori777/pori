@@ -1,30 +1,75 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>poriのポートフォリオ</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.scss">
-        <link rel="stylesheet" href="script.js">
-    </head>
-    <body>
-        <header>
-            <div class="headerTitle">Pori</div>
-            <nav class="headerMenu">
-                <ul>
-                    <a href=""><li>HOME</li></a>
-                    <a href=""><li>ABOUT</li></a>
-                    <a href=""><li>PRODUCT</li></a>
-                    <a href=""><li>CONTACT</li></a>
-                </ul>
-            </nav>
+<head>
+    <!--html*5の初期設定-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--seo対策の類-->
+    <meta name="description" content="生活に癒しを取り入れリラックスしたライフスタイルを">
+    <meta name="keywords" content="植物,草,木,生活空間,ライフスタイル,癒し">
+    <!--リンクを貼ったときの設定(pc)-->
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LANDING">
+    <meta property="og:url" content="http://example.com">
+    <meta property="og:description" content="生活に癒しを取り入れリラックスしたライフスタイルを">
+    <meta property="og:site_name" content="生活に癒しを取り入れリラックスしたライフスタイルを">
+    <meta property="og:image" content="./img/meta/ogp.jpg">
+    <!--リンクを貼ったときの設定(twitter)-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ユーザー名">
+    <meta name="twitter:title" content="生活に癒しを取り入れリラックスしたライフスタイルを">
+    <!--ファビコンの設定-->
+    <link rel="shortcut icon" href="./img/meta/favicon.ico" type="image/x-icon">
+    <!--stylesheet-->
+        <!--reset.css-->
+    <link rel="stylesheet" href="./css/reset.min.css">
+        <!--googleFonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>LANDING</title>
+</head>
+<body id="pagetop">
+    <header role="banner" class="l-header"><!-- l-はレイアウトのL role="bannerを入れることで複数ヘッダーがあってもしっかり読み込める"-->
+        <h1>LANDING</h1>
+        <nav class="g-navi js-humburger">
+            <ul>
+                <li><a href="#pagetop">TOP</a></li>
+                <li><a href="#works">WORkS</a></li>
+                <li><a href="#merit">MERIT</a></li>
+                <li><a href="#case">CASE</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <button class="p-hamburger js-hamburger--bt">
+                <span>menuボタン</span>
+            </button>
+        </nav>
+    </header>
+    <article id="mainvisual" class="p-mainvisual"><!-- 1つで完結するものにはprojectのPをつける-->
+        <dl class="p-mainvisual__ttlset">
+            <dt>自然と暮らす</dt>
+            <dd>生活に癒しを取り入れ<br>
+                リラックスしたライフスタイルを</dd>
+        </dl>
+    </article>
+    <section id="works" class="p-section--work">
+        <header class="p-section__header">
+            <h2 class="c-section__header">WORK <span>仕事</span></h2><!-- 繰り返しサイト内で使うパーツはコンポーネントのｃをつける-->
+            <img src="./img/works/main.jpg" alt="植物の写真">
+            <dl>
+                <dt>居住空間に緑をお届け</dt>
+                <dd>我々のサービスはお客様がお住いの空間に「緑」をお届けすること。暮らしの中に緑を取り込むことでリラックス</dd>
+            </dl>
         </header>
-        <main>
-
-        </main>
-        <footer>
-
-        </footer>
-        <script src="script.js"></script>
-    </body>
+        <ul class="p-section__items">
+            <li class="item">
+                <figure class="c-card--ttl-center">
+                    <img src="./img/works/" alt="">
+                </figure>
+            </li>
+        </ul>
+    </section>
+</body>
 </html>
