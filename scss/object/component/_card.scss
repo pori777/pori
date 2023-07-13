@@ -1,0 +1,46 @@
+.c-card {
+    @include breakpoint( tablet ) {
+    }
+    @include breakpoint( pc ) {
+    }
+    &--ttl-center {
+        width: 100%;
+        margin-bottom: 20px;
+        @include breakpoint( tablet ) {
+            margin-bottom: 0;
+        }
+        > img {
+            width: 100%;
+            margin: 0;
+        }
+        > figcaption{
+            padding: 0 30px 40px;
+            .ttl {
+                margin: -1.5rem 0 30px;
+                font-size: 3rem;
+                line-height: 1;
+                @include oswald;
+            }
+            dl {
+                dt {
+                    margin-bottom: 15px;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                }
+                dd {
+                    font-size: 1.6rem;
+                    font-weight: normal;
+                    line-height: 2.4;
+                    &::first-line {
+                        line-height: 1;
+                    }
+                    @include breakpoint( tablet ) {
+                    }
+                    @include breakpoint( pc ) {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

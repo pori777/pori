@@ -1,0 +1,111 @@
+.p-section {
+    padding: 0 30px 50px;
+    @include breakpoint( tablet ) {
+    }
+    @include breakpoint( pc ) {
+        padding: 0 60px 120px;
+    }
+    &__header {
+        margin-bottom: 30px;
+        @include breakpoint( tablet ) {
+        }
+        @include breakpoint( pc ) {
+            margin-bottom: 60px;
+        }
+        .c-section-ttlset {
+            @include breakpoint( tablet ) {
+            }
+            @include breakpoint( pc ) {
+            }
+        }
+        img {
+            margin-bottom: 30px;
+            @include breakpoint( tablet ) {
+            }
+            @include breakpoint( pc ) {
+            }
+        }
+        dl {
+            margin-bottom: 30px;
+            @include breakpoint( tablet ) {
+            }
+            @include breakpoint( pc ) {
+            }
+            dt {
+                margin-bottom: 20px;
+                font-size: 2rem;
+                font-weight: bold;
+                line-height: 1;
+                @include breakpoint( tablet ) {
+                }
+                @include breakpoint( pc ) {
+                }
+            }
+            dd {
+                font-size: 1.6rem;
+                line-height: 1.875;
+                @include breakpoint( tablet ) {
+                }
+                @include breakpoint( pc ) {
+                }
+            }
+        }
+    }//header
+    &__items {
+        list-style-type: none;
+        @include breakpoint( tablet ) {
+            display: flex;
+            justify-content: space-between;
+        }
+        @include breakpoint( pc ) {
+        }
+    }
+    &--work {
+        @extend .p-section;//.p-sectionの内容が継承される
+        @include breakpoint( tablet ) {
+        }
+        @include breakpoint( pc ) {
+        }
+        .p-section__header {
+            @include breakpoint( tablet ) {
+                margin-bottom: 180px;
+                position: relative;
+            }
+            @include breakpoint( pc ) {
+                margin-bottom: 60px;
+            }
+            > img {
+                @include breakpoint( tablet ) {
+                    width: 72.2%;
+                    top: 0;
+                    right: 0;
+                    position: absolute;
+                    z-index: -1;
+                }
+                @include breakpoint( pc ) {
+                    width: 50%;
+                    right: -60px;
+                }
+            }
+            > dl {
+                @include breakpoint( tablet ) {
+                    width: 40.8%;
+                }
+            }
+        }//.p-section__header
+        .p-section__items {
+            @include breakpoint( pc ) {
+                min-width: 753px;
+                width: 55.625%;
+            }
+            .item {
+                background: #FFF9E8;
+                @include breakpoint( tablet ) {
+                    width: calc( 33% - 15px );
+                }
+            }
+        }
+    }
+}
+
+
