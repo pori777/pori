@@ -1,10 +1,25 @@
-//foundation
+/*
+ * foundation
+ */
+
 @import "foundation/base";
 
-//layout
+/*
+ * layout
+ */
+
 @import "layout/header";
 
-//object
+/*
+ * object
+ */
+
+//component
+@import "object/component/section-ttlset";
+@import "object/component/card";
+
+//project
 @import "object/project/gnavi";
 @import "object/project/hamburger";
 @import "object/project/mainvisual";
+@import "object/project/section";
