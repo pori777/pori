@@ -236,6 +236,13 @@ body {
   align-items: center;
   z-index: 1;
 }
+@media (min-width: 769px) {
+  .p-mainvisual {
+    height: calc(100vh - 120px);
+    margin-bottom: 120px;
+    justify-content: center;
+  }
+}
 .p-mainvisual::before {
   content: "";
   width: 100%;
