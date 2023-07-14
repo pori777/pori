@@ -1,0 +1,13 @@
+.l-footer {
+    padding: 30px 0;
+    @include oswald;
+    text-align: center;//親要素に記載して子要素が中央寄せになる、display:blockである必要がある。
+    h2 {
+        font-size: 2.4rem;
+    }
+    .copyright {
+        small {
+            font-size: 1.2rem;
+        }
+    }
+}
