@@ -79,6 +79,19 @@ body {
   }
 }
 
+.l-footer {
+  padding: 30px 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: "400";
+  text-align: center;
+}
+.l-footer h2 {
+  font-size: 2.4rem;
+}
+.l-footer .copyright small {
+  font-size: 1.2rem;
+}
+
 /*
  * object
  */
@@ -142,6 +155,80 @@ body {
   .c-card--ttl-center > figcaption dl dd {
     font-size: 1.4rem;
   }
+}
+.c-card--bg {
+  position: relative;
+}
+.c-card--bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
+.c-card--bg img {
+  min-height: 410px;
+}
+@media (min-width: 769px) {
+  .c-card--bg img {
+    height: inherit;
+  }
+}
+.c-card--bg figcaption {
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  z-index: 2;
+}
+.c-card--bg header h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+.c-card--bg header h2::after {
+  content: "";
+  width: 90px;
+  height: 1px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  display: block;
+}
+.c-card--bg header time {
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: "400";
+  font-weight: bold;
+}
+.c-card--bg p {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.c-button--submit {
+  width: 225px;
+  padding: 12px;
+  background: #867A62;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 2rem;
+  display: block;
 }
 
 .p-gnavi .list {
@@ -355,11 +442,11 @@ body {
   }
 }
 
-.p-section, .p-section--work {
+.p-section, .p-section--case, .p-section--work {
   padding: 0 30px 50px;
 }
 @media (min-width: 769px) {
-  .p-section, .p-section--work {
+  .p-section, .p-section--case, .p-section--work {
     padding: 0 60px 120px;
   }
 }
@@ -513,4 +600,114 @@ body {
   height: 19.37px;
   margin-left: -5px;
   background-image: url("../img/merit/ico04.svg");
+}
+.p-section--merit .list li dl dt {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+.p-section--merit .list li dl dd {
+  margin-left: 27px;
+  font-size: 1.4rem;
+  line-height: 1.714;
+  white-space: wrap;
+}
+@media (min-width: 641px) {
+  .p-section--case .p-section__items {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 769px) {
+  .p-section--case .p-section__items {
+    width: auto;
+    margin: auto;
+  }
+}
+.p-section--case .p-section__items .item {
+  margin-bottom: 20px;
+}
+@media (min-width: 641px) {
+  .p-section--case .p-section__items .item {
+    width: calc(50% - 15px);
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+}
+@media (min-width: 641px) {
+  .p-section--case .p-section__items .item:nth-child(1), .p-section--case .p-section__items .item:nth-child(2) {
+    margin-top: 0;
+  }
+}
+.p-section--contact {
+  margin-bottom: 50px;
+  padding: 50px 30px;
+  background: #FDF1D0;
+}
+@media (min-width: 769px) {
+  .p-section--contact {
+    padding: 120px 60px 120px;
+  }
+}
+
+.p-contact > p {
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  line-height: 1.875;
+}
+.p-contact form {
+  width: 100%;
+}
+.p-contact form table {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.p-contact form tr {
+  width: 100%;
+}
+.p-contact form td {
+  padding: 2px 2px 30px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.p-contact form td:nth-child(1) {
+  width: 80px;
+}
+.p-contact form td:nth-child(2) {
+  width: 100%;
+}
+.p-contact form td:last-child {
+  padding-bottom: 0;
+}
+.p-contact form td label {
+  margin-top: -2px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-weight: "400";
+}
+.p-contact form td label span {
+  font-size: 1.2rem;
+}
+.p-contact form td input,
+.p-contact form td textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.4rem;
+  display: block;
+  box-sizing: border-box;
+}
+.p-contact form td input {
+  height: 45px;
+}
+.p-contact form td textarea {
+  height: 120px;
+}
+.p-contact form .c-button--submit {
+  margin: auto;
+}
+
+.u-margin--button0 {
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
