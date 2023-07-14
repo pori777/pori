@@ -188,7 +188,56 @@
                         }
                     }
                 }
+                dl {
+                    dt {
+                        margin-bottom: 15px;
+                        font-size: 1.8rem;
+                        display: flex;
+                        align-items: center;
+                    }
+                    dd {
+                        margin-left: 27px;
+                        font-size: 1.4rem;
+                        line-height: 1.714;
+                        white-space: wrap;
+                    }
+                }
             }
+        }
+    }
+    &--case {
+        @extend .p-section;
+        .p-section__items {
+            @include breakpoint( tablet ) {
+                flex-wrap: wrap;
+            }
+            @include breakpoint( pc ) {
+                width: auto;
+                margin: auto;
+            }
+            .item {
+                margin-bottom: 20px;
+                @include breakpoint( tablet ) {
+                    width: calc( 50% - 15px );
+                    margin-bottom: 0;
+                    margin-top: 30px;
+                }
+                &:nth-child( 1 ),
+                &:nth-child( 2 ) {
+                    @include breakpoint( tablet ) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    //case
+    &--contact {
+        margin-bottom: 50px;
+        padding: 50px 30px;
+        background: #FDF1D0;
+        @include breakpoint( pc ) {
+            padding: 120px 60px 120px;
         }
     }
 }
