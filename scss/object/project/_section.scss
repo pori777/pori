@@ -1,53 +1,27 @@
 .p-section {
     padding: 0 30px 50px;
-    @include breakpoint( tablet ) {
-    }
     @include breakpoint( pc ) {
         padding: 0 60px 120px;
     }
     &__header {
         margin-bottom: 30px;
-        @include breakpoint( tablet ) {
-        }
         @include breakpoint( pc ) {
             margin-bottom: 60px;
         }
-        .c-section-ttlset {
-            @include breakpoint( tablet ) {
-            }
-            @include breakpoint( pc ) {
-            }
-        }
         img {
             margin-bottom: 30px;
-            @include breakpoint( tablet ) {
-            }
-            @include breakpoint( pc ) {
-            }
         }
         dl {
             margin-bottom: 30px;
-            @include breakpoint( tablet ) {
-            }
-            @include breakpoint( pc ) {
-            }
             dt {
                 margin-bottom: 20px;
                 font-size: 2rem;
                 font-weight: bold;
                 line-height: 1;
-                @include breakpoint( tablet ) {
-                }
-                @include breakpoint( pc ) {
-                }
             }
             dd {
                 font-size: 1.6rem;
                 line-height: 1.875;
-                @include breakpoint( tablet ) {
-                }
-                @include breakpoint( pc ) {
-                }
             }
         }
     }//header
@@ -62,10 +36,6 @@
     }
     &--work {
         @extend .p-section;//.p-sectionの内容が継承される
-        @include breakpoint( tablet ) {
-        }
-        @include breakpoint( pc ) {
-        }
         .p-section__header {
             @include breakpoint( tablet ) {
                 margin-bottom: 180px;
