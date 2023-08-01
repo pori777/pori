@@ -7,9 +7,6 @@
     display:          flex;
     justify-content:  center;
     align-items: center;
-    @include breakpoint( tablet ) {
-
-    }
     @include breakpoint( pc ) {
         height:     100%;
         max-height: 120px;
